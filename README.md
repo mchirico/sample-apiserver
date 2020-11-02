@@ -10,7 +10,11 @@ docker push quay.io/mchirico/kube-sample-apiserver:v1
 
 ```
 
+## Build
 
+```
+go build -a -o sample-apiserver
+```
 
 
 Demonstration of how to use the k8s.io/apiserver library to build a functional API server.
