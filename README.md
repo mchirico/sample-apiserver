@@ -17,6 +17,26 @@ go build -a -o sample-apiserver
 ```
 
 
+## etcd
+
+```bash
+etcd &
+```
+
+
+```bash
+
+./sample-apiserver --secure-port 8443 --etcd-servers http://127.0.0.1:2379 --v=7 \
+   --client-ca-file ca.crt \
+   --kubeconfig ~/.kube/config \
+   --authentication-kubeconfig ~/.kube/config \
+   --authorization-kubeconfig ~/.kube/config
+   
+```   
+
+
+
+
 Demonstration of how to use the k8s.io/apiserver library to build a functional API server.
 
 **Note:** go-get or vendor this package as `k8s.io/sample-apiserver`.
